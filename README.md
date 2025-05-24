@@ -1,45 +1,85 @@
-# Transcripci-n-y-Sincronizaci-n-de-Canciones
-LyriSync es una herramienta de escritorio que permite transcribir canciones en formato .mp3, extrayendo la letra y generando archivos de texto con sincronización temporal. Posteriormente, estos archivos pueden utilizarse para mostrar la letra de la canción en tiempo real mientras se reproduce, simulando una experiencia tipo karaoke.
+
+# 🎵 **LyriSync - Transcripción y Sincronización de Canciones**
 
 
-#pip install pygame pillow mutagen
+**LyriSync** es una herramienta de escritorio que permite transcribir canciones en formato `.mp3`, extrayendo la letra y generando archivos de texto con sincronización temporal. Posteriormente, estos archivos pueden utilizarse para mostrar la letra de la canción en tiempo real mientras se reproduce, simulando una experiencia tipo karaoke.
+
+---
+
+## ✨ **Características principales**
+
+- 🎧 **Transcripción de canciones desde archivos MP3**
+- 🕒 **Generación de archivos de texto con sincronización temporal**
+- 🎤 **Reproducción de canciones con visualización de letras al estilo karaoke**
+- 🖱️ **Interfaz gráfica sencilla e intuitiva**
+
+---
+
+## 🖥️ **Requisitos del sistema**
+
+- `Python 3.6` o superior  
+- `FFmpeg` instalado y configurado en el `PATH` del sistema  
+- Sistema operativo **Windows** (probado en Windows 10)
+
+---
+
+## 📦 **Dependencias**
+
+Este proyecto utiliza las siguientes bibliotecas de Python:
+
+- `pip install pygame pillow mutagene`
+```bash
+
+---
+
+## 🔧 **Instalación**
+
+### 1. Instalar Python
+
+Asegúrate de tener Python instalado. 
+
+### 2. Instalar FFmpeg (Windows)
+
+1. Ve al sitio oficial de descargas: [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)  
+2. Descarga la versión correspondiente a tu sistema operativo (Windows)  
+3. Extrae el contenido del archivo `.zip`  
+4. Copia la ruta de la carpeta `bin` del FFmpeg extraído  
+5. Añade esta ruta a la variable de entorno `PATH` de tu sistema  
+
+   ```
+   Panel de Control → Sistema y Seguridad → Sistema → Configuración avanzada del sistema → Variables de entorno
+   ```
+
+   En "Variables del sistema":
+   - Selecciona `Path` → **Editar** → **Nuevo** → pega la ruta copiada → **Aceptar**
+
+### 3. Instalar dependencias de Python
 
 
-#############################################################################
 
-Instalación de FFmpeg (Windows)
-Ve al sitio oficial de descargas: https://ffmpeg.org/download.html
+## ▶️ **Uso del programa**
 
-Descarga la versión correspondiente a tu sistema operativo (Windows).
+### 1. Transcribir una canción
 
-Extrae el contenido del archivo .zip.
+Ejecuta el script `transcriptor.py`:
 
-Copia la ruta de la carpeta bin del FFmpeg extraído.
+```
+transcriptor.py
+```
 
-Añade esta ruta a la variable de entorno PATH de tu sistema:
+🗂️ Se abrirá una ventana para que selecciones un archivo `.mp3`. El script generará un archivo `.txt` con la letra y los tiempos de la canción.
 
-Abre el Panel de Control → Sistema y Seguridad → Sistema → Configuración avanzada del sistema → Variables de entorno.
+### 2. Reproducir canción con letra sincronizada
 
-En "Variables del sistema", selecciona Path → Editar → Nuevo → pega la ruta copiada → Aceptar.
+Una vez generado el archivo `.txt`, ejecuta el script principal:
 
-###############################################################################
-
-
-
-#Primero, ejecuta el script transcriptor.py
-
-Se abrirá una ventana para que selecciones un archivo .mp3.
-El script procesará el archivo y generará un archivo .txt con la letra y los tiempos de la canción seleccionada.
-
-Una vez generado el archivo .txt, ejecuta el archivo principal:
-
-    #main.py
-
+```
+ main.py
+```
 
 Este script te permitirá:
 
-Seleccionar la canción en formato .mp3.
+1. Seleccionar la canción en formato `.mp3`  
+2. Seleccionar el archivo `.txt` generado  
+3. Mostrar la letra sincronizada en pantalla 🎶
 
-Seleccionar el archivo .txt generado con la letra y los tiempos.
-
-El programa reproducirá la canción mostrando la letra sincronizada en pantalla.
